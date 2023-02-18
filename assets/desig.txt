@@ -1,0 +1,1 @@
+Unnecessary abstraction: In some cases, the Visitor pattern can introduce an unnecessary level of abstraction, making the code more difficult to understand and maintain.
