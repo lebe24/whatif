@@ -1,6 +1,6 @@
 class Character {
   // character pic with assets name
-  static const String catar = 'assets/characters/catar.png';
+  static const String cater = 'assets/characters/catar.png';
   static const String kilmonger = 'assets/characters/kilmonger.png';
   static const String strange = 'assets/characters/strange.png';
   static const String tchella = 'assets/characters/tchalla.png';
@@ -12,17 +12,15 @@ class Character {
 
   static const String logo = 'assets/wat.png';
 
-  
-
-  static const List<dynamic> catarInfo = [
-    {'name': 'Cater', 'image': catar}
+  static const List<dynamic> MarvelInfo = [
+    {'name': 'Cater', 'image': cater},
+    {'name': 'Kilmonger', 'image': kilmonger},
+    {'name': 'Strange', 'image': strange}
   ];
 
   static const List<dynamic> kilmongerInfo = [
     {'name': 'Cater', 'image': kilmonger}
   ];
 
-  static const List<dynamic> strangeInfo = [
-    {'name': 'Cater', 'image': strange}
-  ];
+  static const List<dynamic> strangeInfo = [];
 }

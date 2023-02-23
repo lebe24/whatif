@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 
 class AppTextStyle {
-
   static const String fontFamily = 'Avenger';
 
   /// Text style for heading 1 text
   static const TextStyle h1 = TextStyle(
-    fontSize: 35,
+    fontSize: 85,
     fontWeight: FontWeight.w700,
   );
 
   /// Text style for heading 2 text
   static const TextStyle h2 = TextStyle(
-    fontSize: 25,
+    fontSize: 35,
     fontWeight: FontWeight.w400,
   );
 
@@ -27,5 +26,4 @@ class AppTextStyle {
     fontSize: 16,
     fontWeight: FontWeight.w400,
   );
-
 }
