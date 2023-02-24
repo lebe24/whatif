@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart'as DotEnv;
 import 'package:whatif/Screens/Home.dart';
-import 'package:whatif/Widget/Watcher.dart';
 import 'package:whatif/core/config/style/app_theme.dart';
-import 'package:whatif/core/firebase/store.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 Future<void> main() async {
   // WidgetsFlutterBinding.ensureInitialized();

@@ -39,6 +39,8 @@ dependencies:
   flutter_swiper: ^1.1.6
   firebase_core: ^2.6.1
   cloud_firestore: ^4.4.2
+  http: ^0.13.5
+  flutter_dotenv: ^5.0.2
   
 
 dev_dependencies:
@@ -70,6 +72,7 @@ flutter:
   assets:
     - assets/characters/
     - assets/
+    - .env
     
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

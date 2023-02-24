@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:whatif/Screens/Detail.dart';
 import 'package:whatif/core/config/style/app_color.dart';
 import 'package:whatif/core/config/style/app_text.dart';
 import 'package:whatif/core/data/charater.dart';
@@ -11,8 +10,17 @@ class CharacterCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: null,
+    return GestureDetector(
+      onTap: () => Navigator.of(context).push(PageRouteBuilder(
+        transitionDuration: Duration(seconds: 1),
+        reverseTransitionDuration: Duration(seconds: 2),
+        pageBuilder: (context, animation, secondaryAnimation) {
+          return Detail(
+            img: Character.marvelInfo[index]['image'],
+            name: Character.marvelInfo[index]['name'],
+          );
+        },
+      )),
       child: Stack(children: [
         Column(
           children: [
@@ -30,16 +38,19 @@ class CharacterCard extends StatelessWidget {
                   children: [
                     SizedBox(height: 100),
                     Text(
-                      Character.MarvelInfo[index]['name'],
+                      Character.marvelInfo[index]['name'],
                       style: AppTextStyle.h2,
                       textAlign: TextAlign.left,
                     ),
-                    Text(
-                      Character.MarvelInfo[index]['name'],
-                      style: AppTextStyle.h2,
-                      textAlign: TextAlign.left,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: Text(
+                        Character.marvelInfo[0]['title'],
+                        style: AppTextStyle.h3,
+                        textAlign: TextAlign.center,
+                      ),
                     ),
-                    SizedBox(width: 250, height: 80),
+                    SizedBox(width: 150, height: 80),
                   ],
                 ),
               ),
@@ -47,9 +58,9 @@ class CharacterCard extends StatelessWidget {
           ],
         ),
         Hero(
-            tag: index,
+            tag: 'hero',
             child: Image.asset(
-              Character.MarvelInfo[index]['image'],
+              Character.marvelInfo[index]['image'],
               height: 200,
             )),
         Positioned(
